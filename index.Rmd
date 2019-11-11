@@ -1,0 +1,355 @@
+---
+title: "Maps, hexagons and life in Australia"
+author: "Stephanie Kobakian <br> srkobakian"
+output:
+  xaringan::moon_reader:
+    css: ["sugarbag.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: bottom, right, inverse
+background-image: url(figures/Sally-north-west-australia.jpg)
+background-position: 50% 50%
+background-size: 120%
+
+# Maps, hexagons and
+# life in Australia
+
+### srkobakian [`r icon::fa_twitter()`](https://twitter.com/srkobakian)[`r icon::fa_github()`](https://github.com/srkobakian)
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, message = FALSE, warning = FALSE, echo = FALSE)
+```
+
+---
+
+class: top, center
+
+Thesis Title: Good practices in visualising geo-spatial disease data
+
+School of Mathematical Sciences
+Science and Engineering Faculty
+ 
+---
+
+class: top, center
+
+background-image: url(figures/atlas.png)
+background-position: 50% 60%
+background-size: 80%
+
+
+# Australian Cancer Atlas
+
+???
+(Title slide)
+Good morning, my name is Stephanie.
+I want to start by saying thank you to the organisers for this opportunity to speak to you today.
+I am a Research Masters student at QUT, working with Prof. Kerrie Mengersen and Dr. Earl Duncan. This work is also co-supervised by Prof. Dianne Cook at Monash University.
+
+(Atlas slide)
+I have been focused on visual statistics, specifically how our use of maps or alternative visualisations allows us to see spatial distributions.
+
+This work was inspired by the Australian Cancer Atlas.
+This is an online, interactive web tool for exploring the impact of cancer on Australia, through the visualisation of Incidence Rates and Excess Death Rates.
+---
+
+class: top, center
+
+background-image: url(figures/cancer_maps/global_international agency for research on cancer_app3.png)
+
+background-size: 80%
+
+# Global Atlases
+
+---
+
+class: top, center
+
+background-image: url(figures/cancer_maps/global_the cancer atlas_app4.png)
+
+background-size: 80%
+
+# Global Atlases
+
+
+---
+
+class: top, center
+
+background-image: url(figures/cancer_maps/US_all cancer types_nccd_cdc_app7.png)
+
+background-size: 80%
+
+# American Atlases
+
+---
+
+class: top, center
+
+background-image: url(figures/cancer_maps/australia_lung cancer.png)
+
+background-size: 80%
+
+# Australian Cancer Atlas
+
+---
+
+class: bottom, center
+
+background-image: url(figures/cancer_maps/australia_lung cancer.png)
+
+background-size: 80%
+
+
+# How to we best represent these communities?
+
+---
+
+
+class: top, center
+
+background-image: url(figures/aus.png)
+
+background-size: 80%
+
+# States and Territories
+
+???
+These coloured regions are the states and territories of Australia.
+They are coloured accoring to the amount of geographic land they occupy.
+The darkest colour on this map is the area in sqkms of Western Australia.
+
+---
+
+class: inverse, center, middle
+
+# Problem
+
+---
+
+class: top, center
+
+background-image: url(figures/quote.png)
+
+background-size: 80%
+
+???
+To paraphrase Kahneman:
+We treate the limited information we have as if it were all there is to know.
+We build the best possible stories from the information available to us and if it is a good story, we believe it."
+
+We give our attention to what is observable, 
+Here the largest state with the darkest colour draws our attention.
+
+---
+
+class: center, top
+
+background-image: url(figures/aus.png)
+
+background-size: 80%
+
+# What are we missing?
+
+---
+class: center, top
+
+background-image: url(figures/aus_states.png)
+
+background-size: 80%
+
+# Australian Capital Territory
+
+???
+The Australian Capital Territory is extremely important in Australia.
+For one, Canberra is the capital city, and the location of the conference.
+More importantly it is where our Representative and Senators come to govern our country.
+
+---
+
+class: inverse, center, middle
+
+# Where are the communities?
+
+???
+This map may be appropriate in some cases, but for our work, we are interested in the spatial distribution of cancer, and cancer affects people.
+Communities with similar genetic predispositions, lifestyles and access to services.
+
+---
+
+
+class: maps, bottom, center
+
+background-image: url(figures/aus_liver_f.png)
+
+## Liver
+Incidence for females
+---
+
+
+class: maps, bottom, center
+
+background-image: url(figures/aus_liver_f_hex.png)
+
+
+
+## Liver
+Incidence for females
+
+---
+
+
+class: maps, bottom, center
+
+background-image: url(figures/aus_liver_m.png)
+
+
+## Liver
+Incidence for males
+---
+
+
+class: maps, bottom, center
+
+background-image: url(figures/aus_liver_m_hex.png)
+
+
+## Liver
+Incidence for males
+---
+
+class: maps, bottom, center
+
+background-image: url(figures/aus_melanoma_p.png)
+
+
+## Melanoma
+Incidence for males
+---
+
+
+class: maps, bottom, center
+background-image: url(figures/aus_melanoma_p_hex.png)
+
+
+# Melanoma
+Incidence for males
+
+---
+
+class: maps, bottom, center
+
+
+background-image: url(figures/sugarbag.png)
+background-position: 50% 50%
+background-size: 60%
+
+???
+When the goal is to see the population, there are several visualisation methods that have been developed.
+
+---
+
+class: algorithm, center, top
+
+background-image: url(figures/tas_centroids.png)
+
+# Tasmania: 98 SA2 regions
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_1grid.png)
+
+# Create a square grid
+
+---
+
+class: algorithm, center, top
+
+background-image: url(figures/tas_2hexgrid.png)
+
+# Create a hexagon grid
+
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_3buffer.png)
+
+# Strategic buffering
+
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_4centroid1.png)
+
+# Begin allocating centroids
+
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_5centroid1.png)
+
+# Circular filter
+
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_6centroid1.png)
+
+# Pie slice filter
+
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_7centroid1.png)
+
+# Pie slice filter
+
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_8centroid1.png)
+
+
+# Closest available point
+
+---
+class: algorithm, center, top
+
+background-image: url(figures/tas_9end.png)
+background-position: 50% 60%
+background-size: 90%
+
+# Final product
+
+---
+# References
+Buja, A., D. Cook, and D. Swayne. (1999). “Inference for Data Visualization.” In Talk given at Joint Statistical Meetings. Baltimore, Maryland. Accessed 11 November 2019 from http://www-stat.wharton.upenn.edu/~buja/PAPERS/visual-inference.pdf.
+
+---
+class: inverse, center, middle
+
+# Thank you!
+
+## Prof. Di Cook
+## Prof. Kerrie Mengersen
+## Dr Earl Duncan
+
+---
+
+class: inverse middle center
+
+### slides available `r icon::fa_github()` [srkobakian/YSC2019](https://github.com/srkobakian/YSC2019)
+
+### created with xaringan <i class="fas fa-user-ninja"></i>
+
+### sugarbag maps `r icon::fa_github()``r icon::fa_box()` [srkobakian/sugarbag](https://github.com/srkobakian/sugarbag)
+
+### title slide image [NASA/EarthKAM](https://www.nasa.gov/image-feature/northwest-australia-from-the-space-stations-earthkam/)
+
+### This work is under licensed [`r icon::fa("creative-commons")` BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
