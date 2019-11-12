@@ -50,7 +50,7 @@ a, a > code {
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-  font-family: 'Shadows Into Light';
+  font-family: 'Arimo';
   color: #4f2107;
 }
 
@@ -62,7 +62,7 @@ a, a > code {
 }
 
 .maps h1, .maps h2, .maps h3{
-  font-family: 'Shadows Into Light';
+  font-family: 'Arimo';
   color: #a2d3db;
 }
 
@@ -74,7 +74,7 @@ a, a > code {
 }
 
 .algorithm h1, .algorithm h2, .algorithm h3{
-  font-family: 'Shadows Into Light';
+  font-family: 'Arimo';
   color: #C7DCE8;
 }
 .table {
@@ -85,19 +85,19 @@ a, a > code {
 }
 
 .title-slide h1 {
-  font-family: 'Shadows Into Light';
+  font-family: 'Arimo';
   color: #d69d6f;
   margin-top: -10px;
 }
 
 .title-slide h2 {
-  font-family: 'Shadows Into Light';
+  font-family: 'Arimo';
   color: #d69d6f;
   margin-top: -10px;
 }
 
 .title-slide h3 {
-  font-family: 'Shadows Into Light';
+  font-family: 'Arimo';
   color: #FFEBDB;
 }
 
