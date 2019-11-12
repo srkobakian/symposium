@@ -103,14 +103,15 @@ What draws your attention in each map?
 class: algorithm, center, top
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/maps.png)
-background-position: 50% 80%
-background-size: 90%
+background-position: 50% 60%
+background-size: 100%
 
 # Line up experiment
+.bottom[Same data, different display]
+
 
 ???
-position 5
-
+position 12, replicate 9
 ---
 
 class: maps, center, top
@@ -178,15 +179,9 @@ class: inverse, center, middle
 
 # Thank you!
 
-## Prof. Di Cook
-## Prof. Kerrie Mengersen
-## Dr Earl Duncan
+### Prof. Kerrie Mengersen, Dr Earl Duncan, Prof. Di Cook
 
----
-
-class: inverse middle center
-
-### slides available `r icon::fa_github()` [srkobakian/YSC2019](https://github.com/srkobakian/YSC2019)
+### scripts and data available `r icon::fa_github()` [srkobakian](https://github.com/srkobakian)
 
 ### created with xaringan <i class="fas fa-user-ninja"></i>
 

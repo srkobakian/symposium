@@ -43,9 +43,6 @@ a, a > code {
   display: none;
 }
 
-.remark-slide-number {
-  display: none;
-}
 
 .inverse {
   background-color: #a2d3db;
@@ -53,6 +50,7 @@ a, a > code {
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
+  font-family: 'Shadows Into Light';
   color: #d69d6f;
 }
 
@@ -64,6 +62,7 @@ a, a > code {
 }
 
 .maps h1, .maps h2, .maps h3{
+  font-family: 'Shadows Into Light';
   color: #a2d3db;
 }
 
@@ -75,6 +74,7 @@ a, a > code {
 }
 
 .algorithm h1, .algorithm h2, .algorithm h3{
+  font-family: 'Shadows Into Light';
   color: #C7DCE8;
 }
 .table {
