@@ -42,9 +42,8 @@ Throughout my masters I have been supervised by Prof. Kerrie Mengersen and Dr. E
 This work is also co-supervised by Prof. Dianne Cook at Monash University.
 I will start by saying thank you to the organisers for this opportunity to speak to you today.
 
-I have been focused on visual inference, this is what people learn when shown a display.
 We have used displays of spatial distributions, which show relationships over space.
-We have explored how our use of maps or alternative visualisations allow us to see and understand spatial distributions.
+We have explored how our use of maps or alternative visualisations allow us to see and understand spatial distributions, using visual inference.
 
 ---
 
