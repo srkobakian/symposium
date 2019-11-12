@@ -10,7 +10,6 @@ output:
     nature:
       highlightStyle: github
       highlightLines: true
-      countIncrementalSlides: false
 ---
 
 class: bottom, right, title-slide
@@ -74,52 +73,14 @@ background-size: 90%
 ???
 This is not the first of its kind, there are many sites and published works which explore the spatial distributions of cancer throughout the world.
 
----
-
-
-class: top, center
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus.png)
-
-background-size: 80%
-
-# States and Territories
-
-???
-These coloured regions are the states and territories of Australia.
-They are coloured accoring to the amount of geographic land they occupy.
-The darkest colour on this map is the area in sqkms of Western Australia.
-
----
-
-class: inverse, center, middle
-
-# Problem
-
----
-
-class: top, center
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/quote.png)
-
-background-size: 80%
-
-???
-To paraphrase Kahneman:
-We treate the limited information we have as if it were all there is to know.
-We build the best possible stories from the information available to us and if it is a good story, we believe it."
-
-We give our attention to what is observable, 
-Here the largest state with the darkest colour draws our attention.
-
----
 
 class: top, center
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_sa_areas.png)
 background-size: 100%
 
-# Where are the communities?
+# Problem
+## Where are the communities?
 
 ???
 This map may be appropriate in some cases, but for our work, we are interested in the spatial distribution of cancer, and cancer affects people.
@@ -129,73 +90,36 @@ So when we try to present population statistics visually to explain spatial dist
 
 ---
 
+
 class: maps, bottom, center
+# What can we learn?
 
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_liver_f.png)
+## 3 by 2 map of 3 distributions from cancer atlas
 
-## Liver
-Incidence for females
+What draws your attention in each map?
+
+---
+# Line up experiment
+
 
 ---
 
+class: maps, center, top
 
-class: maps, bottom, center
+background-image: url(https://github.com/srkobakian/experiment/raw/master/figures/pilot/replicate_change.png)
+background-position: 50% 80%
+background-size: 90%
 
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_liver_f.png)
-
-## Liver
-Incidence for females
+# Probability of detection 
 ---
 
+class: maps, center, top
 
-class: maps, bottom, center
+background-image: url(https://github.com/srkobakian/experiment/raw/master/figures/pilot/replicate_change_time.png)
+background-position: 50% 80%
+background-size: 90%
 
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_liver_f_hex.png)
-
-
-
-## Liver
-Incidence for females
-
----
-
-
-class: maps, bottom, center
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_liver_m.png)
-
-
-## Liver
-Incidence for males
----
-
-
-class: maps, bottom, center
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_liver_m_hex.png)
-
-
-## Liver
-Incidence for males
----
-
-class: maps, bottom, center
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_melanoma_p.png)
-
-
-## Melanoma
-Incidence for males
----
-
-
-class: maps, bottom, center
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_melanoma_p_hex.png)
-
-
-# Melanoma
-Incidence for males
-
+# Time taken to submit response
 ---
 
 class: maps, bottom, center
@@ -221,8 +145,10 @@ class: algorithm, center, top
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/steps.png)
 
+background-position: 50% 90%
+background-size: 90%
 
-# Choosing an appropriate hexagon point
+# Choosing a hexagon
 
 ---
 class: algorithm, center, top
@@ -234,6 +160,7 @@ background-size: 90%
 # Final product
 
 ---
+
 # References
 Buja, A., D. Cook, and D. Swayne. (1999). “Inference for Data Visualization.” In Talk given at Joint Statistical Meetings. Baltimore, Maryland. Accessed 11 November 2019 from http://www-stat.wharton.upenn.edu/~buja/PAPERS/visual-inference.pdf.
 
