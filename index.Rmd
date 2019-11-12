@@ -4,6 +4,7 @@ author: "Stephanie Kobakian <br> srkobakian"
 output:
   xaringan::moon_reader:
     css: ["sugarbag.css"]
+    logo: "figures/crest.png"
     seal: false
     lib_dir: libs
     footer: "mylink"
@@ -18,6 +19,7 @@ background-position: 50% 50%
 background-size: 120%
 
 <div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 
 # Good practices in visualising
 # geo-spatial disease data
@@ -52,13 +54,14 @@ background-image: url(https://github.com/srkobakian/symposium/raw/master/figures
 background-position: 50% 60%
 background-size: 80%
 
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 
 # Australian Cancer Atlas
 ???
 This work was inspired by the Australian Cancer Atlas.
 This is an online, interactive web tool for exploring the impact of cancer in Australia, through the visualisation of Incidence Rates and Excess Death Rates.
 
-<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
 ---
 
 class: top, center
@@ -70,6 +73,8 @@ background-size: 90%
 # Global Atlases
 
 <div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
+
 ???
 This is not the first of its kind, there are many sites and published works which explore the spatial distributions of cancer throughout the world.
 
@@ -78,6 +83,9 @@ class: top, center
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_sa_areas.png)
 background-size: 100%
+
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 
 # Problem
 ## Where are the communities?
@@ -89,9 +97,10 @@ The statistical areas may have similar amounts of people, but the areas  with la
 So when we try to present population statistics visually to explain spatial distributions we are missing a vast amount of information.
 
 ---
-
-
 class: maps, bottom, center
+
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 # What can we learn?
 
 ## 3 by 2 map of 3 distributions from cancer atlas
@@ -105,6 +114,9 @@ class: algorithm, center, top
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/maps.png)
 background-position: 50% 60%
 background-size: 100%
+
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 
 # Line up experiment
 .bottom[Same data, different display]
@@ -120,6 +132,9 @@ background-image: url(https://github.com/srkobakian/experiment/raw/master/figure
 background-position: 50% 80%
 background-size: 90%
 
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
+
 # Probability of detection 
 ---
 
@@ -128,6 +143,9 @@ class: maps, center, top
 background-image: url(https://github.com/srkobakian/experiment/raw/master/figures/pilot/replicate_change_time.png)
 background-position: 50% 80%
 background-size: 90%
+
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 
 # Time taken to submit response
 ---
@@ -139,6 +157,9 @@ background-image: url(https://github.com/srkobakian/symposium/raw/master/figures
 background-position: 50% 50%
 background-size: 60%
 
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
+
 ???
 When the goal is to see the population, there are several visualisation methods that have been developed.
 
@@ -147,6 +168,9 @@ When the goal is to see the population, there are several visualisation methods 
 class: algorithm, center, top
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/tas_centroids.png)
+
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 
 # Tasmania: 98 SA2 regions
 ---
@@ -158,6 +182,9 @@ background-image: url(https://github.com/srkobakian/symposium/raw/master/figures
 background-position: 50% 90%
 background-size: 90%
 
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
+
 # Choosing a hexagon
 
 ---
@@ -167,6 +194,9 @@ background-image: url(https://github.com/srkobakian/symposium/raw/master/figures
 background-position: 50% 60%
 background-size: 90%
 
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
+
 # Final product
 
 ---
@@ -174,19 +204,25 @@ background-size: 90%
 # References
 Buja, A., D. Cook, and D. Swayne. (1999). “Inference for Data Visualization.” In Talk given at Joint Statistical Meetings. Baltimore, Maryland. Accessed 11 November 2019 from http://www-stat.wharton.upenn.edu/~buja/PAPERS/visual-inference.pdf.
 
+
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
 ---
+
 class: inverse, center, middle
 
 # Thank you!
 
 ### Prof. Kerrie Mengersen, Dr Earl Duncan, Prof. Di Cook
 
-### scripts and data available `r icon::fa_github()` [srkobakian](https://github.com/srkobakian)
-
 ### created with xaringan <i class="fas fa-user-ninja"></i>
+
+### scripts and data available `r icon::fa_github()` [srkobakian](https://github.com/srkobakian)
 
 ### sugarbag maps `r icon::fa_github()``r icon::fa_box()` [srkobakian/sugarbag](https://github.com/srkobakian/sugarbag)
 
 ### title slide image [NASA/EarthKAM](https://www.nasa.gov/image-feature/northwest-australia-from-the-space-stations-earthkam/)
 
 ### This work is under licensed [`r icon::fa("creative-commons")` BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
