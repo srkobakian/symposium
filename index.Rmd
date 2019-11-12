@@ -99,8 +99,17 @@ class: maps, bottom, center
 What draws your attention in each map?
 
 ---
+
+class: algorithm, center, top
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/maps.png)
+background-position: 50% 80%
+background-size: 90%
+
 # Line up experiment
 
+???
+position 5
 
 ---
 
