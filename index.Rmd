@@ -38,13 +38,13 @@ options(htmltools.dir.version = FALSE, message = FALSE, warning = FALSE, echo = 
 ???
 (Title slide)
 Good morning, my name is Stephanie.
-I want to start by saying thank you to the organisers for this opportunity to speak to you today.
-I am supervised Prof. Kerrie Mengersen and Dr. Earl Duncan. This work is also co-supervised by Prof. Dianne Cook at Monash University.
+Throughout my masters I have been supervised by Prof. Kerrie Mengersen and Dr. Earl Duncan science and eng.
+This work is also co-supervised by Prof. Dianne Cook at Monash University.
+I will start by saying thank you to the organisers for this opportunity to speak to you today.
 
 I have been focused on visual inference, this is what people learn when shown a display.
 We have used displays of spatial distributions, which show relationships over space.
-These displays can be considered visual statistics.
-We have explored how our use of maps or alternative visualisations allow us to see spatial distributions.
+We have explored how our use of maps or alternative visualisations allow us to see and understand spatial distributions.
 
 ---
 
@@ -78,7 +78,7 @@ background-size: 90%
 ???
 This is not the first of its kind, there are many sites and published works which explore the spatial distributions of cancer throughout the world.
 
-
+---
 class: top, center
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_sa_areas.png)
@@ -91,12 +91,25 @@ background-size: 100%
 ## Where are the communities?
 
 ???
+ABS uses breakdowns of the population.
 This map may be appropriate in some cases, but for our work, we are interested in the spatial distribution of cancer, and cancer affects people.
 Communities with similar genetic predispositions, lifestyles and access to services.
 The statistical areas may have similar amounts of people, but the areas  with largest land mass are over represented.
 So when we try to present population statistics visually to explain spatial distributions we are missing a vast amount of information.
 
 ---
+class: top, center, inverse
+
+# Aims
+
+## 1: Algorithm for hexmapping Australia
+
+## 2: Test the effectiveness of the hexagon tile map
+
+## 3: Animate between the hexagon tile map and choropleth map
+
+---
+
 class: maps, bottom, center
 
 <div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
@@ -106,6 +119,9 @@ class: maps, bottom, center
 ## 3 by 2 map of 3 distributions from cancer atlas
 
 What draws your attention in each map?
+
+???
+Back to cancer 
 
 ---
 
@@ -124,6 +140,10 @@ background-size: 100%
 
 ???
 position 12, replicate 9
+Is this a better way to present data.
+Lineup protocol: 12 possible locations, one real data set 
+
+Pick the map that is most different?
 ---
 
 class: maps, center, top
