@@ -1,77 +1,82 @@
 ---
-title: "Maps, hexagons and life in Australia"
+title: "Symposium"
 author: "Stephanie Kobakian <br> srkobakian"
 output:
   xaringan::moon_reader:
     css: ["sugarbag.css"]
     seal: false
     lib_dir: libs
+    footer: "mylink"
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
 
-class: bottom, right, inverse
-background-image: url(figures/Sally-north-west-australia.jpg)
+class: bottom, right, title-slide
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/Sally-north-west-australia.jpg)
 background-position: 50% 50%
 background-size: 120%
 
-# Maps, hexagons and
-# life in Australia
+<div class="my-footer"><span> slides: srkobakian-qut.netlify.com/ </span></div> 
 
-### srkobakian [`r icon::fa_twitter()`](https://twitter.com/srkobakian)[`r icon::fa_github()`](https://github.com/srkobakian)
+# Good practices in visualising
+# geo-spatial disease data
+
+### Stephanie Kobakian 
+### School of Mathematical Sciences
+
+### Science and Engineering Faculty
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE, message = FALSE, warning = FALSE, echo = FALSE)
 ```
 
----
-
-class: top, center
-
-Thesis Title: Good practices in visualising geo-spatial disease data
-
-School of Mathematical Sciences
-Science and Engineering Faculty
- 
----
-
-class: top, center
-
-background-image: url(figures/atlas.png)
-background-position: 50% 60%
-background-size: 80%
-
-
-# Australian Cancer Atlas
 
 ???
 (Title slide)
 Good morning, my name is Stephanie.
 I want to start by saying thank you to the organisers for this opportunity to speak to you today.
-I am a Research Masters student at QUT, working with Prof. Kerrie Mengersen and Dr. Earl Duncan. This work is also co-supervised by Prof. Dianne Cook at Monash University.
+I am supervised Prof. Kerrie Mengersen and Dr. Earl Duncan. This work is also co-supervised by Prof. Dianne Cook at Monash University.
 
-(Atlas slide)
-I have been focused on visual statistics, specifically how our use of maps or alternative visualisations allows us to see spatial distributions.
+I have been focused on visual inference, this is what people learn when shown a display.
+We have used displays of spatial distributions, which show relationships over space.
+These displays can be considered visual statistics.
+We have explored how our use of maps or alternative visualisations allow us to see spatial distributions.
 
+---
+
+class: top, center
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/atlas.png)
+background-position: 50% 60%
+background-size: 80%
+
+
+# Australian Cancer Atlas
+???
 This work was inspired by the Australian Cancer Atlas.
-This is an online, interactive web tool for exploring the impact of cancer on Australia, through the visualisation of Incidence Rates and Excess Death Rates.
+This is an online, interactive web tool for exploring the impact of cancer in Australia, through the visualisation of Incidence Rates and Excess Death Rates.
+
 ---
 
 class: top, center
 
-background-image: url(figures/cancer_maps/global_international agency for research on cancer_app3.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/cancer_maps/global_international agency for research on cancer_app3.png)
 
 background-size: 80%
 
 # Global Atlases
 
+???
+This is not the first of its kind, there are many sites and published works which explore the spatial distributions of cancer throughout the world.
+
 ---
 
 class: top, center
 
-background-image: url(figures/cancer_maps/global_the cancer atlas_app4.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/cancer_maps/global_the cancer atlas_app4.png)
 
 background-size: 80%
 
@@ -82,7 +87,7 @@ background-size: 80%
 
 class: top, center
 
-background-image: url(figures/cancer_maps/US_all cancer types_nccd_cdc_app7.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/cancer_maps/US_all cancer types_nccd_cdc_app7.png)
 
 background-size: 80%
 
@@ -92,7 +97,7 @@ background-size: 80%
 
 class: top, center
 
-background-image: url(figures/cancer_maps/australia_lung cancer.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/cancer_maps/australia_lung cancer.png)
 
 background-size: 80%
 
@@ -102,7 +107,7 @@ background-size: 80%
 
 class: bottom, center
 
-background-image: url(figures/cancer_maps/australia_lung cancer.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/cancer_maps/australia_lung cancer.png)
 
 background-size: 80%
 
@@ -114,7 +119,7 @@ background-size: 80%
 
 class: top, center
 
-background-image: url(figures/aus.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus.png)
 
 background-size: 80%
 
@@ -135,7 +140,7 @@ class: inverse, center, middle
 
 class: top, center
 
-background-image: url(figures/quote.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/quote.png)
 
 background-size: 80%
 
@@ -151,7 +156,7 @@ Here the largest state with the darkest colour draws our attention.
 
 class: center, top
 
-background-image: url(figures/aus.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus.png)
 
 background-size: 80%
 
@@ -160,7 +165,7 @@ background-size: 80%
 ---
 class: center, top
 
-background-image: url(figures/aus_states.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus_states.png)
 
 background-size: 80%
 
@@ -186,7 +191,7 @@ Communities with similar genetic predispositions, lifestyles and access to servi
 
 class: maps, bottom, center
 
-background-image: url(figures/aus_liver_f.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus_liver_f.png)
 
 ## Liver
 Incidence for females
@@ -195,7 +200,7 @@ Incidence for females
 
 class: maps, bottom, center
 
-background-image: url(figures/aus_liver_f_hex.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus_liver_f_hex.png)
 
 
 
@@ -207,7 +212,7 @@ Incidence for females
 
 class: maps, bottom, center
 
-background-image: url(figures/aus_liver_m.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus_liver_m.png)
 
 
 ## Liver
@@ -217,7 +222,7 @@ Incidence for males
 
 class: maps, bottom, center
 
-background-image: url(figures/aus_liver_m_hex.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus_liver_m_hex.png)
 
 
 ## Liver
@@ -226,7 +231,7 @@ Incidence for males
 
 class: maps, bottom, center
 
-background-image: url(figures/aus_melanoma_p.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus_melanoma_p.png)
 
 
 ## Melanoma
@@ -235,7 +240,7 @@ Incidence for males
 
 
 class: maps, bottom, center
-background-image: url(figures/aus_melanoma_p_hex.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/aus_melanoma_p_hex.png)
 
 
 # Melanoma
@@ -246,7 +251,7 @@ Incidence for males
 class: maps, bottom, center
 
 
-background-image: url(figures/sugarbag.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/sugarbag.png)
 background-position: 50% 50%
 background-size: 60%
 
@@ -257,13 +262,13 @@ When the goal is to see the population, there are several visualisation methods 
 
 class: algorithm, center, top
 
-background-image: url(figures/tas_centroids.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_centroids.png)
 
 # Tasmania: 98 SA2 regions
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_1grid.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_1grid.png)
 
 # Create a square grid
 
@@ -271,49 +276,49 @@ background-image: url(figures/tas_1grid.png)
 
 class: algorithm, center, top
 
-background-image: url(figures/tas_2hexgrid.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_2hexgrid.png)
 
 # Create a hexagon grid
 
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_3buffer.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_3buffer.png)
 
 # Strategic buffering
 
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_4centroid1.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_4centroid1.png)
 
 # Begin allocating centroids
 
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_5centroid1.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_5centroid1.png)
 
 # Circular filter
 
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_6centroid1.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_6centroid1.png)
 
 # Pie slice filter
 
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_7centroid1.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_7centroid1.png)
 
 # Pie slice filter
 
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_8centroid1.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_8centroid1.png)
 
 
 # Closest available point
@@ -321,7 +326,7 @@ background-image: url(figures/tas_8centroid1.png)
 ---
 class: algorithm, center, top
 
-background-image: url(figures/tas_9end.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master//figures/tas_9end.png)
 background-position: 50% 60%
 background-size: 90%
 
