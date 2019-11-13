@@ -1,0 +1,77 @@
+---
+title: "Untitled"
+author: "Stephanie"
+date: "15/01/2019"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r packages}
+library(tidyverse)
+library(sugarbag)
+```
+
+```{r data}
+# Change this for a more detailed map
+fort_tas <- fortify_sfc(tas_sa2, keep = 0.2)
+```
+
+
+
+```{r}
+sa2_map <- create_hexmap(shp = tas_sa2, 
+  sf_id = "SA2_NAME16", buffer_dist = NULL, 
+  hex_filter = 10, hex_size = 0.2, export_shp = FALSE, 
+  focal_points = capital_cities, verbose = TRUE)
+
+hexmap_sa2 <- left_join(tas_sa2, 
+  sa2_map)
+```
+
+```{r}
+hex_points_df <- fortify_hexagon(data = hexmap_sa2, sf_id = "SA2_NAME16", hex_size = 0.2)
+
+
+# variable data
+areasq <- bind_cols(SA2_NAME16 = tas_sa2$SA2_NAME16, 
+  AREASQKM16 = tas_sa2$AREASQKM16)
+
+hex_verts <-  hex_points_df %>%
+  left_join(areasq) %>% 
+  mutate(poly_type = "hex") %>% 
+  left_join(fort_tas %>%
+      dplyr::select(SA2_NAME16, polygon))
+
+
+geo_verts <- fort_tas %>% dplyr::select(SA2_NAME16,SA4_NAME16, long, lat, polygon, AREASQKM16) %>% 
+  mutate(poly_type = "geography") %>%
+  left_join(hex_verts %>% 
+    dplyr::select(SA2_NAME16, hex_id) %>% distinct())
+
+hex_animate <- full_join(hex_verts, geo_verts)
+```
+
+```{r}
+library(ggplot2)
+library(gganimate)
+
+# Create static plot
+ggplot(hex_animate) + 
+  geom_polygon(aes(x = long, y = lat, group = interaction(SA2_NAME16, polygon))) + facet_wrap(~poly_type) + coord_equal()
+
+```
+
+
+```{r}
+# Create animated plot
+hex <- ggplot(hex_animate, aes(group = interaction(SA2_NAME16,polygon))) + 
+  geom_polygon(aes(x = long, y = lat, group = interaction(SA2_NAME16, polygon), fill = SA4_NAME16)) + theme_void() + coord_equal() + 
+  transition_states(states = poly_type, wrap = FALSE) +
+  ease_aes('quadratic-in') + scale_fill_brewer(type = "qual", palette = "Set3") +guides(fill=FALSE)
+
+animate(hex, nframes=20, duration = 10, renderer = gifski_renderer("tasanim.gif"))
+animate(hex, nframes=20, duration = 10, device = "png", 
+        renderer = file_renderer("animation", prefix = "tas_anim", overwrite = TRUE))
+```
+
