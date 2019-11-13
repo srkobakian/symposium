@@ -70,26 +70,45 @@ background-size: 90%
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
 
 ???
-This is not the first of its kind, there are many sites and published works which explore the spatial distributions of cancer throughout the world.
+This is not the first of its kind, there are many web atlases and published works which explore the spatial distributions of cancer throughout the world.
+
+In our extensive literature review, with the help of Jessie Roberts we looked at over 30 online atlases, and even more published books containing cancer atlases.
+
+The main display used in these works is a choropleth map.
+These involve drawing administrative boundaries that depend on the level of detail desired.
+The maps on the left show global atlases, with country boundaries, the top right map of the USA uses the states. Australia is much more detailed. This uses at ABS Statistical Areas at Level 2.
+
+These denote communities in Australia.
+This ranges from rural areas which operate on large areas of land, to the small inner-city suburbs which operate of a small land area.
 
 ---
-class: top, center
 
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/aus_sa_areas.png)
-background-size: 100%
+class: maps, top, center
 
-&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
-&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/ausgrid.png)
+background-size: 90%
 
-# Problem
-## Where are the communities?
+background-position: 50% 90%
+
+# Alternative displays of Australia
 
 ???
-ABS uses breakdowns of the population.
+Statistical Areas at Level 3, 336 areas. 
+
 This map may be appropriate in some cases, but for our work, we are interested in the spatial distribution of cancer, and cancer affects people.
 Communities with similar genetic predispositions, lifestyles and access to services.
-The statistical areas may have similar amounts of people, but the areas  with largest land mass are over represented.
+The statistical areas may have similar amounts of people, but the areas with largest land mass are over represented.
 So when we try to present population statistics visually to explain spatial distributions we are missing a vast amount of information.
+
+
+Alternative to choropleths:
+Micromaps, Cartograms, Contiguous, Non-Contiguous, Dorling, Tile map, Geofaceting, Multivariate displays
+
+Four main types of cartograms displaying melanoma incidence on SA3 areas in Australia.
+The version of a contiguous cartogram (a) has expanded the highly populated areas, while preserving the full shapes of rural areas. It has not fully resolved the population transformation of areas, and if it had accurately sized areas by population the country would be unrecognizable.
+The shape-preserved cartogram is unreadable, and all areas have been reduced to tiny spots on the map. Zooming in on a high-resolution output shows that it does indeed preserve the areas though.
+The Dorling cartogram (c) has lost all geographic context. 
+The hexmap (d) provides a reasonable spatial distribution despite having too much white-space in the outback areas.
 
 ---
 class: top, center, inverse
@@ -98,23 +117,260 @@ class: top, center, inverse
 
 ## 1: Algorithm for hexmapping Australia
 
-## 2: Test the effectiveness of the hexagon tile map
+## 2: Animate between the hexagon tile map and choropleth map
 
-## 3: Animate between the hexagon tile map and choropleth map
+## 3: Test the effectiveness of the hexagon tile map
 
 ---
 
-class: maps, bottom, center
+class: algorithm, center, top
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/tas_centroids.png)
 
 &lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
-# What can we learn?
 
-## 3 by 2 map of 3 distributions from cancer atlas
-
-What draws your attention in each map?
+# Tasmania: 98 SA2 regions
 
 ???
+
+Lots of areas. Originally with the intention of creating one alternative map for the Cancer Atlas we used SA2 areas.
+Squares did not have enough sides to keep neighbours next to each other.
+Hexagons gave more flexibility.
+Tried to do this manually, with cutouts of hexagons. 
+Very quickly realised it was extremely difficult.
+
+Changed our aim to be an algorithm.
+
+---
+
+class: algorithm, center, top
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/steps.png)
+
+background-position: 50% 90%
+background-size: 90%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Choosing a hexagon
+
+---
+class: algorithm, center, top
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/tas_9end.png)
+background-position: 50% 60%
+background-size: 90%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Final product
+
+???
+Challenges:
+
+This is an unfamiliar map. People may be able to look at this and orient themselves using the underlying display.
+We need to help them join the dots, so to speak.
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0005.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0008.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0010.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0011.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0012.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0013.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0014.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0015.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0016.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0017.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0018.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0019.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top, center
+
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0020.png)
+background-position: 50% 80%
+background-size: 70%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; animation: srkobakian-qut.netlify.com/tasanim.gif &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# Animating
+
+---
+
+class: maps, top center
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers.png)
+background-position: 50% 95%
+background-size: 75%
+
+&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
+&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
+
+# What can we learn?
+
+???
+
+What draws your attention in each map?
 Back to cancer 
 
 ---
@@ -152,71 +408,15 @@ background-size: 90%
 # Probability of detection 
 ---
 
-class: maps, center, top
-
-background-image: url(https://github.com/srkobakian/experiment/raw/master/figures/pilot/replicate_change_time.png)
-background-position: 50% 80%
-background-size: 90%
-
-&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
-&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
-
-# Time taken to submit response
----
-
-class: maps, bottom, center
-
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/sugarbag.png)
-background-position: 50% 50%
-background-size: 60%
-
-&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
-&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
-
-???
-When the goal is to see the population, there are several visualisation methods that have been developed.
-
----
-
-class: algorithm, center, top
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/tas_centroids.png)
-
-&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
-&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
-
-# Tasmania: 98 SA2 regions
----
-
-class: algorithm, center, top
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/steps.png)
-
-background-position: 50% 90%
-background-size: 90%
-
-&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
-&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
-
-# Choosing a hexagon
-
----
-class: algorithm, center, top
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/tas_9end.png)
-background-position: 50% 60%
-background-size: 90%
-
-&lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
-&lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
-
-# Final product
-
----
 
 # References
-Buja, A., D. Cook, and D. Swayne. (1999). “Inference for Data Visualization.” In Talk given at Joint Statistical Meetings. Baltimore, Maryland. Accessed 11 November 2019 from http://www-stat.wharton.upenn.edu/~buja/PAPERS/visual-inference.pdf.
+[1] Dougenik JA, Chrisman NR, Niemeyer DR. An Algorithm to Construct Continuous Area Cartograms. The Professional Geographer 1985;37:75–81. doi:10.1111/j.0033-0124.1985.00075.x.
+
+[2] Olson JM. Noncontiguous Area Cartograms. The Professional Geographer 1976;28:371–80. doi:10.1111/j.0033-0124.1976.00371.x.
+
+[3] Dorling D. Area Cartograms: Their Use and Creation. In:. Concepts and techniques in modern geography (catmog), vol. 59, 2011, pp. 252–60. doi:10.1002/9780470979587.ch33.
+
+[4] Buja, A., D. Cook, and D. Swayne. (1999). “Inference for Data Visualization.” In Talk given at Joint Statistical Meetings. Baltimore, Maryland. Accessed 11 November 2019 from http://www-stat.wharton.upenn.edu/~buja/PAPERS/visual-inference.pdf.
 
 
 &lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 

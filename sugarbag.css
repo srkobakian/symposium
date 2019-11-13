@@ -44,6 +44,10 @@ a, a > code {
 }
 
 
+.remark-slide-number {
+  display: none;
+}
+
 .inverse {
   background-color: #a2d3db;
   color: #4f2107;
