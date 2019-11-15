@@ -19,14 +19,14 @@ background-size: 120%
 &lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
 
-# Good practices in visualising
-# geo-spatial disease data
+## An Australian alternative
+## to choropleth maps;
+## visualising geo-spatial
+## disease data
+
 
 ### Stephanie Kobakian 
-### School of Mathematical Sciences
-
-### Science and Engineering Faculty
-
+School of Mathematical Sciences: Science and Engineering Faculty
 
 
 
@@ -58,6 +58,34 @@ This is an online, interactive web tool for exploring the impact of cancer in Au
 
 ---
 
+class: maps, bottom, center
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers_geo.png)
+background-size: 100%
+
+background-position: 50% -5%
+
+
+Liver:  Red and orange areas in North Queensland
+
+Liver:  Most of the South East is blue
+
+Melanoma:  Red and orange areas around Brisbane
+
+Melanoma:  Most of the country is blue, except Queensland
+
+
+???
+
+Colour scheme:
+Yellow colour for areas around the Australian average incidence rates.
+Dark blue for rates lower than average, Red for high. 
+
+
+Think about what the distribution of these cancer incidences is across the population of Australia.
+
+---
+
 class: top, center
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/atlas%20examples.png)
@@ -83,6 +111,7 @@ This ranges from rural areas which operate on large areas of land, to the small 
 
 ---
 
+
 class: maps, top, center
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/ausgrid.png)
@@ -96,6 +125,8 @@ background-position: 50% 90%
 Statistical Areas at Level 3, 336 areas. 
 
 This map may be appropriate in some cases, but for our work, we are interested in the spatial distribution of cancer, and cancer affects people.
+Disease affects people not geography. How can we best visually communicate the impact of disease for Australians, maintaining a geographic reference?
+
 Communities with similar genetic predispositions, lifestyles and access to services.
 The statistical areas may have similar amounts of people, but the areas with largest land mass are over represented.
 So when we try to present population statistics visually to explain spatial distributions we are missing a vast amount of information.
@@ -111,26 +142,30 @@ The Dorling cartogram (c) has lost all geographic context.
 The hexmap (d) provides a reasonable spatial distribution despite having too much white-space in the outback areas.
 
 ---
-class: top, center, inverse
+class: top
 
 # Aims
 
-## 1: Algorithm for hexmapping Australia
+## 1: Hexagon tile maps: an algorithm
 
-## 2: Animate between the hexagon tile map and choropleth map
+## 2: Animation: connecting the choropleth and hexagon tile maps
 
-## 3: Test the effectiveness of the hexagon tile map
+## 3: Test the effectiveness:  understanding the hexagon tile map in action
 
 ---
+
 
 class: algorithm, center, top
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/tas_centroids.png)
+background-position: 40% 99%
+background-size: 65%
 
 &lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
 
 # Tasmania: 98 SA2 regions
+## What is this choropleth map lacking?
 
 ???
 
@@ -288,6 +323,27 @@ background-size: 70%
 
 ---
 
+class: maps, bottom, center
+
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers_hex.png)
+background-size: 100%
+
+background-position: 50% -5%
+
+
+ Liver:  Red and orange areas in North Queensland, Melbourne, Sydney
+ 
+ Liver:  Most of the South East is blue, city areas are yellow
+ 
+ Melanoma:  Red and orange areas around Queensland cities and Brisbane, not in CBD
+ 
+ Melanoma:  Most of the other areas are blue
+ 
+???
+
+Which is more correct? 
+---
+
 class: maps, top center
 
 background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers.png)
@@ -305,6 +361,7 @@ What draws your attention in each map?
 Back to cancer 
 
 ---
+
 
 class: algorithm, center, top
 
@@ -337,18 +394,27 @@ background-size: 90%
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
 
 # Probability of detection 
+
 ---
 
 
 # References
-[1] Dougenik JA, Chrisman NR, Niemeyer DR. An Algorithm to Construct Continuous Area Cartograms. The Professional Geographer 1985;37:75–81. doi:10.1111/j.0033-0124.1985.00075.x.
-
-[2] Olson JM. Noncontiguous Area Cartograms. The Professional Geographer 1976;28:371–80. doi:10.1111/j.0033-0124.1976.00371.x.
-
-[3] Dorling D. Area Cartograms: Their Use and Creation. In:. Concepts and techniques in modern geography (catmog), vol. 59, 2011, pp. 252–60. doi:10.1002/9780470979587.ch33.
-
-[4] Buja, A., D. Cook, and D. Swayne. (1999). “Inference for Data Visualization.” In Talk given at Joint Statistical Meetings. Baltimore, Maryland. Accessed 11 November 2019 from http://www-stat.wharton.upenn.edu/~buja/PAPERS/visual-inference.pdf.
-
+1. Dougenik JA, Chrisman NR, Niemeyer DR. An Algorithm to Construct Continuous Area Cartograms. The Professional Geographer 1985;37:75–81. doi:10.1111/j.0033-0124.1985.00075.x.
+1. Olson JM. Noncontiguous Area Cartograms. The Professional Geographer 1976;28:371–80. doi:10.1111/j.0033-0124.1976.00371.x.
+1. Dorling D. Area Cartograms: Their Use and Creation. In:. Concepts and techniques in modern geography (catmog), vol. 59, 2011, pp. 252–60. doi:10.1002/9780470979587.ch33.
+1. Buja, A., D. Cook, and D. Swayne. (1999). “Inference for Data Visualization.” In Talk given at Joint Statistical Meetings. Baltimore, Maryland. Accessed 11 November 2019 from http://www-stat.wharton.upenn.edu/~buja/PAPERS/visual-inference.pdf.
+1. Pebesma, E., 2018. Simple Features for R: Standardized Support for
+  Spatial Vector Data. The R Journal 10 (1), 439-446,  https://doi.org/10.32614/RJ-2018-009
+1. H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag  New York, 2016.
+1. Hadley Wickham (2017). tidyverse: Easily Install and Load the  'Tidyverse'. R package version 1.2.1.
+  https://CRAN.R-project.org/package=tidyverse
+1. JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and
+  Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston
+  Chang and Richard Iannone (2019). rmarkdown: Dynamic Documents for R. R
+  package version 1.16. URL https://rmarkdown.rstudio.com.
+1. Stephanie Kobakian and Dianne Cook (2019). sugarbag: Create Tessellated
+  Hexagon Maps. R package version 0.1.1.
+  https://CRAN.R-project.org/package=sugarbag
 
 &lt;div class="my-footer"&gt;&lt;span&gt; slides: srkobakian-qut.netlify.com/ &lt;/span&gt;&lt;/div&gt; 
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
@@ -358,17 +424,15 @@ class: inverse, center, middle
 
 # Thank you!
 
-### Prof. Kerrie Mengersen, Dr Earl Duncan, Prof. Di Cook
+### DProf. Kerrie Mengersen, Dr Earl Duncan, Prof. Di Cook
 
 ### created with xaringan &lt;i class="fas fa-user-ninja"&gt;&lt;/i&gt;
 
 ### scripts and data available <i class="fab  fa-github "></i> [srkobakian](https://github.com/srkobakian)
 
-### sugarbag maps <i class="fab  fa-github "></i><i class="fas  fa-box "></i> [srkobakian/sugarbag](https://github.com/srkobakian/sugarbag)
-
 ### title slide image [NASA/EarthKAM](https://www.nasa.gov/image-feature/northwest-australia-from-the-space-stations-earthkam/)
 
-### This work is under licensed [<i class="fab  fa-creative-commons "></i> BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+This work is under licensed [<i class="fab  fa-creative-commons "></i> BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
 
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
     </textarea>
