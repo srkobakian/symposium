@@ -64,12 +64,11 @@ This is an online, interactive web tool for exploring the impact of cancer in Au
 
 class: maps, bottom, center
 
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers_geo.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers_geography.png)
 background-size: 100%
-
 background-position: 50% -5%
 
-
+# 
 Liver:  Red and orange areas in North Queensland
 
 Liver:  Most of the South East is blue
@@ -84,7 +83,6 @@ Melanoma:  Most of the country is blue, except Queensland
 Colour scheme:
 Yellow colour for areas around the Australian average incidence rates.
 Dark blue for rates lower than average, Red for high. 
-
 
 Think about what the distribution of these cancer incidences is across the population of Australia.
 
@@ -297,51 +295,25 @@ background-size: 70%
 
 # Animating
 
----
 
-class: maps, top, center
-
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0014.png)
-background-position: 50% 80%
-background-size: 70%
-
-<div class="my-footer"><span> animation: srkobakian-qut.netlify.com/tasanim.gif </span></div> 
-<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
-
-# Animating
-
----
-
-class: maps, top, center
-
-
-background-image: url(https://github.com/srkobakian/symposium/raw/master/animation/tas_anim0015.png)
-background-position: 50% 80%
-background-size: 70%
-
-<div class="my-footer"><span> animation: srkobakian-qut.netlify.com/tasanim.gif </span></div> 
-<img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" />
-
-# Animating
 
 ---
 
 class: maps, bottom, center
 
-background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers_hex.png)
-background-size: 100%
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/cancers_hexagons.png)
+background-size: 105%
 
-background-position: 50% -5%
+background-position: 50% 0%
+# 
 
+Liver:  Red and orange areas in North Queensland, Melbourne, Sydney
 
- Liver:  Red and orange areas in North Queensland, Melbourne, Sydney
- 
- Liver:  Most of the South East is blue, city areas are yellow
- 
- Melanoma:  Red and orange areas around Queensland cities and Brisbane, not in CBD
- 
- Melanoma:  Most of the other areas are blue
+Liver:  Most of the South East is blue, city areas are yellow
+
+Melanoma:  Red and orange areas around Queensland cities and Brisbane, not in CBD
+
+Melanoma:  Most of the other areas are blue
  
 ???
 
@@ -390,7 +362,7 @@ Pick the map that is most different?
 
 class: maps, center, top
 
-background-image: url(https://github.com/srkobakian/experiment/raw/master/figures/pilot/replicate_change.png)
+background-image: url(https://github.com/srkobakian/symposium/raw/master/figures/replicate_change.png)
 background-position: 50% 80%
 background-size: 90%
 
