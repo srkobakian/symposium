@@ -97,10 +97,9 @@ a, a > code {
 .title-slide h2 {
   font-family: 'Arimo';
   color: #d69d6f;
-  margin-top: -10px;
 }
 
-.title-slide h3 {
+.title-slide, .title-slide h3 {
   font-family: 'Arimo';
   color: #FFEBDB;
 }
