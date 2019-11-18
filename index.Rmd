@@ -400,6 +400,7 @@ background-image: url(https://github.com/srkobakian/symposium/raw/master/figures
 background-size: 105%
 
 background-position: 50% 0%
+
 # 
 
 Liver:  Red and orange areas in North Queensland, Melbourne, Sydney
