@@ -37,8 +37,7 @@ Good morning, my name is Stephanie.
 Throughout my masters here at QUT I have been supervised by Prof. Kerrie Mengersen and Dr. Earl Duncan, School of Mathematical Sciences, Science and Engineering Faculty. 
 This work is also co-supervised by Prof. Dianne Cook at Monash University.
 
-My research has involved displays of spatial distributions, which show relationships over space, in our case geographic space.
-We have explored how our use of maps or alternative visualisations allow us to see and understand spatial distributions, using visual inference.
+My research has involved creating an alternative display for spatial distributions of Australia.
 
 ---
 
@@ -52,9 +51,17 @@ background-size: 80%
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
 
 # Australian Cancer Atlas
+
 ???
+
 This work was inspired by the Australian Cancer Atlas.
-This is an online, interactive web tool for exploring the impact of cancer in Australia, through the visualisation of Incidence Rates and Excess Death Rates.
+This is an online, interactive web tool for exploring the patterns of cancer burden across Australia.
+Using visualisations of Incidence Rates and Excess Death Rates.
+The goal was to provide a national perspective of how the burden of cancer varied by geographical areas.
+
+The main display on this webpage is the map of Australia broken into 2200 Statistical Areas at level 2.
+These Areas are subdivisions of the population, designed by the Australian Bureau of Statistics.
+They are available to download on their website.
 
 ---
 
@@ -76,9 +83,23 @@ Melanoma:  Most of the country is blue, except Queensland
 
 ???
 
-Colour scheme:
-Yellow colour for areas around the Australian average incidence rates.
-Dark blue for rates lower than average, Red for high. 
+These displays show patterns of cancer burden across Australia.
+On the left, average Standardised Incidence Rate of Liver cancer for Females from 2005-2014.
+What can we see?
+Red and orange areas in North Queensland
+Most of the South East is blue
+You can almost draw a straight line to separate the North West and South East areas.
+
+On the right, average Standardised Incidence Rate of Melanoma cancer for Persons from 2010-2014.
+
+What can we see?
+Red and orange areas around Brisbane
+Most of the country is blue, except Queensland, small patches of yellow
+
+The colour scheme used in the Australian Cancer Atlas:
+Yellow colour for areas around, very close to, the average of the Australian incidence rate.
+Blue for incidence rates lower than average, and dark blue for rates much lower than average.
+Orange for incidence rates higher than average, and red for rates much higher than average.
 
 Think about what the distribution of these cancer incidences is across the population of Australia.
 
@@ -96,16 +117,22 @@ background-size: 90%
 &lt;img src="figures/crest.png" style="position:absolute;top:15px;right:20px;height:100px;width:100px;" /&gt;
 
 ???
-This is not the first of its kind, there are many web atlases and published works which explore the spatial distributions of cancer throughout the world.
+The Australian Cancer Atlas is not the first of its kind globally.
+There are many web atlases and published works which explore the spatial distributions of cancer throughout the world.
+However, it is the first in Australia to bring together information from all the state registries.
 
-In our extensive literature review, with the help of Jessie Roberts we looked at over 30 online atlases, and even more published books containing cancer atlases.
+Throughout the literature review, with the help of Jessie Roberts, we looked at over 30 online atlases, and even more published books containing cancer atlases.
 
-The main display used in these works is a choropleth map.
-These involve drawing administrative boundaries that depend on the level of detail desired.
-The maps on the left show global atlases, with country boundaries, the top right map of the USA uses the states. Australia is much more detailed. This uses at ABS Statistical Areas at Level 2.
+The main display used in these works was a choropleth map.
+The maps on the left show global atlases, with country boundaries.
+The top right map of the USA uses the states.
+The map from the Australian Cancer Atlas is much more detailed.
 
+This uses at ABS Statistical Areas at Level 2.
 These denote communities in Australia.
 This ranges from rural areas which operate on large areas of land, to the small inner-city suburbs which operate of a small land area.
+
+The colour schemes are all different.
 
 ---
 
@@ -120,26 +147,50 @@ background-position: 50% 90%
 # Alternative displays of Australia
 
 ???
-Statistical Areas at Level 3, 336 areas. 
 
-This map may be appropriate in some cases, but for our work, we are interested in the spatial distribution of cancer, and cancer affects people.
-Disease affects people not geography. How can we best visually communicate the impact of disease for Australians, maintaining a geographic reference?
+A choropleth map is currently the most common map for statitical displays.
+A choropleth map is a view of the land, which has been split into smaller areas, such as states or suburbs.
+The statistic for each individual area is usually an aggregation to one value, such as population, or population density. 
+Each area is then shaded or patterned in proportion to the measurement, or value of the variable.
+They show the relationship of variables over geographic space.
+We have explored how our use of maps or alternative visualisations allow us to see and understand spatial distributions, using visual inference.
 
-Communities with similar genetic predispositions, lifestyles and access to services.
+
+This map may be appropriate in some cases, but for our work, we are interested in the spatial distribution of cancer, and cancer affects populations.
+Communities will have similar genetic predispositions, lifestyles and access to services, this can impact the burden of cancer on the community.
+Disease affects people not geography.
+How can we best visually communicate the impact of disease on the communities of Australians.
+How can we maintain a geographic reference, to the familiar geography,
+but effectively communicate the statistics for all areas?
+
 The statistical areas may have similar amounts of people, but the areas with largest land mass are over represented.
 So when we try to present population statistics visually to explain spatial distributions we are missing a vast amount of information.
 
 
 Alternative to choropleths:
-Micromaps, Cartograms, Contiguous, Non-Contiguous, Dorling, Tile map, Geofaceting, Multivariate displays
+Micromaps, Tile map, Geofaceting, Multivariate displays
+Cartograms: Contiguous, Non-Contiguous, Dorling
 
-Four main types of cartograms displaying melanoma incidence on SA3 areas in Australia.
-The version of a contiguous cartogram (a) has expanded the highly populated areas, while preserving the full shapes of rural areas. It has not fully resolved the population transformation of areas, and if it had accurately sized areas by population the country would be unrecognizable.
-The shape-preserved cartogram is unreadable, and all areas have been reduced to tiny spots on the map. Zooming in on a high-resolution output shows that it does indeed preserve the areas though.
-The Dorling cartogram (c) has lost all geographic context. 
-The hexmap (d) provides a reasonable spatial distribution despite having too much white-space in the outback areas.
+Using population to distort, using R software implementations of the algorithms to produce these displays.
+
+Four displays of melanoma incidence on SA3 areas in Australia.
+(a) The contiguous cartogram has expanded the highly populated areas in the capital cities, especially obvious in the South East.
+It has not fully resolved the population transformation of areas, and if it had accurately sized areas by population the country would be unrecognizable.
+This is not a helpful map as the rural areas are still over represented.
+
+(b) The shape-preserved non-contiguous cartogram is unreadable, and all areas have been reduced to tiny spots on the map.
+Zooming in on a high-resolution output shows that it does indeed preserve the areas though.
+This is also not a helpful map as almost no areas are visible.
+Inner city areas are over represented, rural areas have disappeared.
+
+(c) The Dorling cartogram (c) has lost all geographic context. 
+All areas have been correctly sized, inner city areas have become so big the picture has become extremely distorted.
+
+(d) The hexmap provides a reasonable spatial distribution, but has a lot white-space in the outback areas, this may not be the best use of the map space.
+The cities have blended together, but it is obvious where most of the population reside.
 
 ---
+
 class: top
 
 # Aims
@@ -150,8 +201,24 @@ class: top
 
 ## 3: Test the effectiveness:  understanding the hexagon tile map in action
 
----
+???
 
+We have developed three aims for this project over the last 18 months.
+
+Originally the goal was to produce a hexmap for Australia to use in the Australian Cancer Atlas.
+We began attempting this by hand, but it was extremely complex, and it was difficult to contrast the iterations.
+
+We began to develop an algorithm, and implement it in R software.
+This went beyond our initial goal of one hexmap.
+
+
+Aim 1: An algorithm to produce Hexagon tile maps.
+
+Aim 2: Connecting the choropleth and hexagon tile maps by animating between the two displays.
+
+Aim 3: Understanding how people interact with the hexagon tile map and test the effectiveness by testing how accurate survey participants are at spotting the map of a population or spatial distribution. 
+
+---
 
 class: algorithm, center, top
 
@@ -167,13 +234,17 @@ background-size: 65%
 
 ???
 
-Lots of areas. Originally with the intention of creating one alternative map for the Cancer Atlas we used SA2 areas.
+Originally with the intention of creating one alternative map for the Cancer Atlas we used SA2 areas.
 Squares did not have enough sides to keep neighbours next to each other.
 Hexagons gave more flexibility.
-Tried to do this manually, with cutouts of hexagons. 
+We tried to do this manually, with cutouts of hexagons. 
 Very quickly realised it was extremely difficult.
 
-Changed our aim to be an algorithm.
+What is this lacking?
+
+The cream points are extremely close together.
+Rural areas are far. This is a small example of how your attention is draw to the larger land mass.
+But from the amount of cream points we can see there are many small areas that are not drawing our attention.
 
 ---
 
@@ -189,6 +260,25 @@ background-size: 90%
 
 # Choosing a hexagon
 
+???
+
+This shows the key steps in choosing an appropriate hexagon for each area in the collection of spatial areas.
+
+Step 1: An equally spaced grid of rows and columns, each point is the centre of a hexagon
+
+Step 2: A grid to allow tesslation of hexagons
+
+Step 3: A buffer filters out unnecessary points, helps to speed up choice of hexagons
+
+Step 4: Filters for areas with a simple box, where the centroid of the area to allocate is in the middle.
+
+Step 5: Circular distance around the centroid, won't be a perfect circle if its close to the buffer edge.  
+
+Step 6: If no neighbours of the current centroid to allocatee have been placed.
+This helps to ensure spatial relationship between the original ccentroid, and any landmark point, like the capital city of Hobart. 
+
+The closest available point within the specified angle is chosen.
+
 ---
 class: algorithm, center, top
 
@@ -202,9 +292,14 @@ background-size: 90%
 # Final product
 
 ???
+
+This display now draws attention to the densely populated cities. We can see the population centres, and the isolated rural regions don't draw our attention as they did earlier.
+
+
 Challenges:
 
-This is an unfamiliar map. People may be able to look at this and orient themselves using the underlying display.
+This is an unfamiliar map.
+People may be able to look at this and orient themselves using the underlying display.
 We need to help them join the dots, so to speak.
 
 ---
