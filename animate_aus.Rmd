@@ -112,7 +112,9 @@ ggsave(filename = "figures/melanoma_hex.png", device = "png", hex_plot, dpi = 30
 
 
 ```{r}
-hex_anim <- hex %>% filter(sa2_name_2011 %in% qld) %>% 
+areas <- aus_sa2 %>% filter(state_name_2011 %in% c("Tasmania", "Queensland", "New South Wales", "South Australia", "Western Australia", "Victoria", "Northern Territory", "Australian Capital Territory")) %>% pull(sa2_name_2011)
+
+hex_anim <- hex %>% filter(sa2_name_2011 %in% areas) %>% 
   ggplot(aes(group = interaction(sa2_name_2011, polygon))) + 
   geom_polygon(aes(
     x = long, y = lat, 
@@ -122,8 +124,9 @@ hex_anim <- hex %>% filter(sa2_name_2011 %in% qld) %>%
   ease_aes('linear') + 
   scale_fill_manual(values = atlas_colours, na.value = "lightgrey") + guides(fill = FALSE)
 
-animate(hex_anim, nframes = 20, duration = 10, bg = 'transparent', renderer = gifski_renderer(file = "sa2_animation.gif")
-)
-animate(hex_anim, nframes = 20, duration = 10, bg = 'transparent', device = "png", 
-        renderer = file_renderer("animation", prefix = "aus_anim", overwrite = TRUE))
+animate(hex_anim, nframes = 150, duration = 15, rewind = FALSE, bg = 'transparent', renderer = gifski_renderer(file = "melanoma_animation.gif", width = 1600, height = 1200))
+
+/animate(hex_anim, nframes = 60, duration = 15, bg = 'transparent', device = "png", 
+        renderer = file_renderer("animation", prefix = "aus_anim", overwrite = TRUE, 
+          width = 800, height = 600))
 ```
