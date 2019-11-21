@@ -1,0 +1,129 @@
+
+# Full map for Australia
+
+
+```{r data}
+aus_sa2 <- absmapsdata::sa22011 %>% 
+  filter(sa2_name_2011 %in% SIR$SA2_name)
+
+SIR <- read_csv("data/SIR Downloadable Data.csv")
+
+# Change this for a more detailed map
+fort_aus <- aus_sa2  %>% 
+  fortify_sfc(keep = 0.01)
+```
+
+
+
+```{r}
+sa2_neighbours <- st_intersects(aus_sa2, aus_sa2)
+
+sa2_map <- create_hexmap(shp = aus_sa2,
+    sf_id = "sa2_name_2011", 
+  neighbours = sa2_neighbours,
+  buffer_dist = NULL, 
+  hex_filter = 10, 
+  hex_size = 0.27, 
+  export_shp = FALSE, 
+  focal_points = capital_cities, 
+  verbose = TRUE)
+
+```
+
+```{r}
+hexmap_aus <- left_join(SIR %>% 
+    filter(Cancer_name == "Melanoma", Sex_name == "Persons") %>% 
+    select(sa2_name_2011 = SA2_name, Cancer_name, Year, p50), 
+  sa2_map %>% 
+    select(sa2_name_2011, points, hex_id, hex_long, hex_lat))
+
+hex_points_df <- fortify_hexagon(data = hexmap_aus, 
+  sf_id = "sa2_name_2011", hex_size = 0.27) %>% 
+  mutate(polygon = "1")
+
+geo_verts <- fort_aus %>% dplyr::select(sa2_name_2011, long, lat, polygon, albers_sqkm) %>% 
+  left_join(SIR %>% filter(Cancer_name == "Melanoma", Sex_name == "Persons") %>% select(sa2_name_2011 = SA2_name, Cancer_name, Year, p50)) %>% 
+  mutate(poly_type = "geography") %>%
+  left_join(hexmap_aus %>% 
+    dplyr::select(sa2_name_2011, hex_id) %>% distinct())
+
+hex_animate <- bind_rows(hex_points_df, geo_verts)
+```
+
+```{r}
+library(ggplot2)
+library(gganimate)
+
+
+# Set up standard colours
+atlas_colours <- c("A" = "#33809d",
+  "B" = "#aec6c7",
+  "C" = "#fff4bc",
+  "D" = "#ff9a64",
+  "E" = "#ff3500",
+  "NA" = "lightgrey")
+
+colour_cat <- function(column) {
+  cat_column <- case_when(
+    column < 0.75  ~ "A",
+    column >= 0.75 & column < 1  ~ "B",
+    column >= 1 & column < 1.25  ~ "C",
+    column >= 1.25 & column < 1.5  ~ "D",
+    column > 1.5  ~ "E",
+    is.na(column) ~ "NA")
+  return(cat_column)
+}
+
+
+
+# Create animated plot
+
+invthm <- theme_void() + theme(
+  panel.background = element_rect(fill = "transparent", colour = NA), 
+  plot.background = element_rect(fill = "transparent", colour = NA),
+  legend.background = element_rect(fill = "transparent", colour = NA),
+  legend.key = element_rect(fill = "transparent", colour = NA),
+  text = element_text(colour = "white", size = 20),
+)
+
+hex <- hex_animate %>% 
+  mutate(p50cat = map_chr(p50, colour_cat)) %>% 
+  mutate(size = scales::rescale(albers_sqkm, 0.5, 1))
+
+# Create static plot
+ggplot(hex) + 
+  geom_polygon(aes(x = long, y = lat, fill = p50cat, group = interaction(sa2_name_2011, polygon)), size = 3, color = "#808080") + 
+  facet_wrap(~poly_type) + coord_equal() + invthm +
+  scale_fill_manual(values = atlas_colours, na.value = "#006400") + guides(fill = FALSE)
+
+
+# Create static plot - geography
+geo_plot <- ggplot(hex %>% filter(poly_type == "geography")) + 
+  geom_polygon(aes(x = long, y = lat, fill = p50cat, group = interaction(sa2_name_2011, polygon)), colour = "#808080", size = 0.3) + coord_equal() + invthm +
+  scale_fill_manual(values = atlas_colours, na.value = "lightgrey") + guides(fill = FALSE)
+ggsave(filename = "figures/melanoma_geography.png", device = "png", geo_plot, dpi = 300, unit = "in", width = 16, height = 12)
+
+# Create static plot - hexagon
+hex_plot <- ggplot(hex %>% filter(poly_type == "hex")) +
+  geom_polygon(aes(x = long, y = lat, fill = p50cat, group = interaction(sa2_name_2011, polygon)), colour = "#808080", size = 0.1) + coord_equal() + invthm +
+  scale_fill_manual(values = atlas_colours, na.value = "lightgrey") + guides(fill = FALSE)
+ggsave(filename = "figures/melanoma_hex.png", device = "png", hex_plot, dpi = 300, unit = "in", width = 16, height = 12)
+```
+
+
+```{r}
+hex_anim <- hex %>% filter(sa2_name_2011 %in% qld) %>% 
+  ggplot(aes(group = interaction(sa2_name_2011, polygon))) + 
+  geom_polygon(aes(
+    x = long, y = lat, 
+    group = interaction(sa2_name_2011, polygon), 
+    fill = p50cat)) + coord_equal() + invthm +
+  transition_states(states = poly_type, wrap = FALSE) +
+  ease_aes('linear') + 
+  scale_fill_manual(values = atlas_colours, na.value = "lightgrey") + guides(fill = FALSE)
+
+animate(hex_anim, nframes = 20, duration = 10, bg = 'transparent', renderer = gifski_renderer(file = "sa2_animation.gif")
+)
+animate(hex_anim, nframes = 20, duration = 10, bg = 'transparent', device = "png", 
+        renderer = file_renderer("animation", prefix = "aus_anim", overwrite = TRUE))
+```

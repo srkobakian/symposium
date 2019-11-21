@@ -10,11 +10,12 @@ editor_options:
 ```{r packages}
 library(tidyverse)
 library(sugarbag)
+library(sf)
 ```
 
 ```{r data}
 # Change this for a more detailed map
-fort_tas <- fortify_sfc(tas_sa2, keep = 0.2)
+fort_tas <- fortify_sfc(tas_sa2, keep = 0.1)
 ```
 
 
@@ -22,7 +23,7 @@ fort_tas <- fortify_sfc(tas_sa2, keep = 0.2)
 ```{r}
 sa2_map <- create_hexmap(shp = tas_sa2, 
   sf_id = "SA2_NAME16", buffer_dist = NULL, 
-  hex_filter = 10, hex_size = 0.2, export_shp = FALSE, 
+  hex_filter = 10, hex_size = 0.27, export_shp = FALSE, 
   focal_points = capital_cities, verbose = TRUE)
 
 hexmap_sa2 <- left_join(tas_sa2, 
@@ -30,7 +31,7 @@ hexmap_sa2 <- left_join(tas_sa2,
 ```
 
 ```{r}
-hex_points_df <- fortify_hexagon(data = hexmap_sa2, sf_id = "SA2_NAME16", hex_size = 0.2)
+hex_points_df <- fortify_hexagon(data = hexmap_sa2, sf_id = "SA2_NAME16", hex_size = 0.27)
 
 
 # variable data
@@ -83,4 +84,3 @@ animate(hex, nframes=20, duration = 10, bg = 'transparent', renderer = gifski_re
 animate(hex, nframes=20, duration = 10, bg = 'transparent', device = "png", 
         renderer = file_renderer("animation", prefix = "tas_anim", overwrite = TRUE))
 ```
-
